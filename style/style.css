@@ -27,46 +27,58 @@ header h1 {
   font-size: 40px;
 }
 
-nav {
+nav .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
   background-color: #A2BBA3;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+nav .overlay-content {
   position: relative;
-  height: auto;
-}
-
-nav ul {
-  margin: 0;
-  padding: 40px;
-  display: none;
-}
-
-nav ul li {
-  list-style: none;
-  padding: 20px 6px;
+  top: 25%;
+  width: 100%;
   text-align: center;
 }
 
-nav ul a {
+nav .overlay a {
+  padding: 8px;
   text-decoration: none;
+  font-size: 36px;
   color: #0f0f0f;
-  font-size: 18px;
+  display: block;
+  transition: 0.3s;
 }
 
-nav ul a:hover {
-  border-bottom: 2px solid #0f0f0f;
+nav .overlay a:hover,
+nav .overlay a:focus {
+  background-color: #748374;
+  color: #f2f2f2;
+}
+
+nav .overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 50px;
 }
 
 nav .navbar-toggle {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 120px;
+  left: 20px;
   cursor: pointer;
   color: #0f0f0f;
   font-size: 22px;
 }
 
-nav .active {
-  display: block;
-  height: 100vh;
+nav .navbar-toggle .fa-bars {
+  color: #748374;
 }
 
 main {
@@ -250,7 +262,9 @@ footer .legal {
   header h1 {
     font-size: 60px;
   }
-  nav ul a {
+  nav .navbar-toggle {
+    top: 210px;
+    left: 50px;
     font-size: 26px;
   }
   main {
@@ -290,25 +304,29 @@ footer .legal {
   header h1 {
     font-size: 100px;
   }
-  nav {
+  nav .overlay {
+    height: 100%;
+    width: 100%;
+    position: static;
     background-color: #A2BBA3;
+    overflow-x: hidden;
   }
-  nav ul {
+  nav .overlay-content {
+    position: static;
+    text-align: left;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 60px;
+    margin: 0 auto;
+    max-width: 1300px;
   }
-  nav ul li {
-    list-style: none;
-    padding: 10px 24px;
+  nav .overlay a {
+    padding: 10px 20px;
+    font-size: 20px;
+    display: inline;
   }
-  nav ul a {
-    text-decoration: none;
-    color: #0f0f0f;
-    font-size: 18px;
-  }
-  nav ul a:hover {
-    border-bottom: 2px solid #0f0f0f;
+  nav .closebtn,
+  nav .navbar-toggle {
+    visibility: collapse;
   }
   .navbar-toggle {
     display: none;

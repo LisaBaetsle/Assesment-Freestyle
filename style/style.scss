@@ -33,44 +33,58 @@ header {
 
 // NAVIGATION
 nav {
-  background-color: $colorLEucalypt;
-  position: relative;
-  height: auto;
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: $colorLEucalypt;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
 
-  ul {
-    margin: 0;
-    padding: 40px;
-    display: none;
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+  }
 
-    li {
-      list-style: none;
-      padding: 20px 6px;
-      text-align: center;
-    }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: $colorDGrey;
+    display: block;
+    transition: 0.3s;
+  }
 
-    a {
-      text-decoration: none;
-      color: $colorDGrey;
-      font-size: 18px;
-    }
+  .overlay a:hover,
+  .overlay a:focus {
+    background-color: $colorDEucalypt;
+    color: $colorLGrey;
+  }
 
-    a:hover {
-      border-bottom: 2px solid $colorDGrey;
-    }
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 50px;
   }
 
   .navbar-toggle {
     position: absolute;
-    top: 10px;
-    right: 20px;
+    top: 120px;
+    left: 20px;
     cursor: pointer;
     color: $colorDGrey;
     font-size: 22px;
-  }
 
-  .active {
-    display: block;
-    height: 100vh;
+    .fa-bars {
+      color: $colorDEucalypt;
+    }
   }
 }
 
@@ -267,8 +281,10 @@ footer {
   }
 
   // NAVIGATION
-  nav ul {
-    a {
+  nav {
+    .navbar-toggle {
+      top: 210px;
+      left: 50px;
       font-size: 26px;
     }
   }
@@ -327,27 +343,32 @@ footer {
 
   // NAVIGATION
   nav {
-    background-color: $colorLEucalypt;
+    .overlay {
+      height: 100%;
+      width: 100%;
+      position: static;
+      background-color: $colorLEucalypt;
+      overflow-x: hidden;
+    }
 
-    ul {
+    .overlay-content {
+      position: static;
+      text-align: left;
       display: flex;
       flex-wrap: wrap;
-      padding: 10px 60px;
+      margin: 0 auto;
+      max-width: 1300px;
+    }
 
-      li {
-        list-style: none;
-        padding: 10px 24px;
-      }
+    .overlay a {
+      padding: 10px 20px;
+      font-size: 20px;
+      display: inline;
+    }
 
-      a {
-        text-decoration: none;
-        color: $colorDGrey;
-        font-size: 18px;
-      }
-
-      a:hover {
-        border-bottom: 2px solid $colorDGrey;
-      }
+    .closebtn,
+    .navbar-toggle {
+      visibility: collapse;
     }
   }
 
