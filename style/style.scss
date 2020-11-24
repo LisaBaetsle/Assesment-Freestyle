@@ -1,0 +1,453 @@
+@import "fonts";
+@import "colors";
+
+* {
+  margin: 0;
+  font-family: $fontBody;
+  color: $colorDGrey;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/* MOBILE FIRST */
+// HEADER
+header {
+  background-image: url('../assets/header-herbs.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-family: $fontTitle;
+    color: $colorDEucalypt;
+    font-size: 40px;
+  }
+}
+
+// NAVIGATION
+nav {
+  background-color: $colorLEucalypt;
+  position: relative;
+  height: auto;
+
+  ul {
+    margin: 0;
+    padding: 40px;
+    display: none;
+
+    li {
+      list-style: none;
+      padding: 20px 6px;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: $colorDGrey;
+      font-size: 18px;
+    }
+
+    a:hover {
+      border-bottom: 2px solid $colorDGrey;
+    }
+  }
+
+  .navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: $colorDGrey;
+    font-size: 22px;
+  }
+
+  .active {
+    display: block;
+    height: 100vh;
+  }
+}
+
+
+// MAIN
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 10px 20px;
+}
+
+// ASIDE
+aside {
+  background-color: $colorLGrey;
+  padding: 20px;
+
+  #aside-title {
+    font-family: $fontTitle;
+    padding-bottom: 10px;
+    font-size: 24px;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $colorDGrey;
+    margin-left: 10px;
+    padding-left: 6px;
+    line-height: 2.4rem;
+    font-size: 18px;
+  }
+
+  a:hover {
+    background-color: $colorLEucalypt;
+  }
+}
+
+// MAIN SECTION
+section {
+  margin-top: 20px;
+
+  h2 {
+    color: $colorDEucalypt;
+    font-family: $fontTitle;
+    font-size: 28px;
+  }
+}
+
+.cards-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+// CARDS
+.card {
+  border: 1px solid $colorLEucalypt;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(87, 87, 87, 0.2);
+  transition: 0.3s;
+  width: 270px;
+  height: 320px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  .card-title {
+    background-color: $colorLEucalypt;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    height: 45px;
+    text-align: center;
+
+    p {
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 24px;
+    }
+  }
+
+  .card-body {
+    height: 210px;
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 22px;
+    }
+  }
+
+  .card-footer {
+    border-top: 1px solid $colorLEucalypt;
+
+    p {
+      font-size: 18px;
+      font-style: italic;
+      color: $colorDEucalypt;
+      padding: 14px;
+    }
+  }
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+// FOOTER
+footer {
+  background-color: $colorDEucalypt;
+  padding: 40px 20px 30px 20px;
+
+  .footer-information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo,
+  .footer-title {
+    font-family: $fontTitle;
+    font-size: 20px;
+  }
+
+  .footer-logo {
+    font-size: 30px;
+    padding-bottom: 16px;
+  }
+
+  .footer-btn {
+    border: 2px solid $colorLEucalypt;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+
+  .footer-btn:hover {
+    background-color: $colorLEucalypt;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: $colorLGrey;
+  }
+
+  p {
+    color: $colorLGrey;
+    font-size: 16px;
+  }
+
+  ul {
+    padding-left: 10px;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      line-height: 2;
+      font-size: 16px;
+      color: $colorLGrey;
+    }
+
+    a:hover {
+      cursor: pointer;
+      color: $colorDGrey;
+    }
+  }
+
+  .contact,
+  .herbs,
+  .spices {
+    padding-bottom: 40px;
+  }
+
+  .legal {
+    text-align: center;
+  }
+
+}
+
+/* TABLETS */
+@media only screen and (min-width: 600px) {
+
+  // HEADER
+  header {
+    height: 200px;
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+
+  // NAVIGATION
+  nav ul {
+    a {
+      font-size: 26px;
+    }
+  }
+
+  // MAIN
+  main {
+    margin: 50px 50px 20px 50px;
+  }
+
+  // MAIN SECTION
+  section {
+    margin-top: 30px;
+  }
+
+  // CARDS
+  .cards-container {
+    justify-content: space-around;
+  }
+
+  // FOOTER
+  footer {
+    padding: 40px 100px 30px 100px;
+
+    .footer-information {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .contact,
+    .herbs,
+    .spices {
+      padding-bottom: 20px;
+    }
+
+    .legal {
+      text-align: left;
+    }
+  }
+}
+
+/* DESKTOPS */
+@media only screen and (min-width: 992px) {
+
+  // HEADER
+  header {
+    height: 350px;
+
+    h1 {
+      font-size: 100px;
+    }
+
+  }
+
+  // NAVIGATION
+  nav {
+    background-color: $colorLEucalypt;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px 60px;
+
+      li {
+        list-style: none;
+        padding: 10px 24px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $colorDGrey;
+        font-size: 18px;
+      }
+
+      a:hover {
+        border-bottom: 2px solid $colorDGrey;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+
+  // MAIN
+  main {
+    max-width: 1300px;
+    flex-direction: row;
+    margin: 70px auto 70px auto;
+  }
+
+  // ASIDE
+  aside {
+    margin-left: 20px;
+    min-width: 200px;
+  }
+
+  // MAIN SECTION
+  section {
+    margin-top: 15px;
+
+    h2 {
+      font-size: 30px;
+      margin-left: 20px;
+    }
+  }
+
+  // CARDS
+  .cards-container {
+    justify-content: flex-start;
+    margin-left: 20px;
+  }
+
+  .card {
+    margin: 20px;
+  }
+
+  // FOOTER
+  footer {
+    background-color: $colorDEucalypt;
+    padding: 40px 100px 30px 100px;
+
+    .footer-information {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-logo,
+    .footer-title {
+      font-family: $fontTitle;
+      font-size: 20px;
+    }
+
+    .footer-logo {
+      font-size: 30px;
+      padding-bottom: 16px;
+    }
+
+    .footer-btn {
+      border: 2px solid $colorLEucalypt;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+
+    .footer-btn:hover {
+      background-color: $colorLEucalypt;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: white;
+    }
+
+    p {
+      color: white;
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 10px;
+
+      li {
+        list-style: none;
+        line-height: 2;
+        font-size: 16px;
+        color: white;
+      }
+    }
+
+    .contact,
+    .herbs,
+    .spices {
+      padding-bottom: 20px;
+    }
+  }
+}
