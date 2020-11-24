@@ -1,4 +1,4 @@
-# Assesment-Freestyle#
+# Assesment-Freestyle
 
 ## Motivation
 
