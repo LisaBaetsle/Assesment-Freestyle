@@ -1,8 +1,8 @@
-# Assesment-Freestyle
+# Assessment-Freestyle
 
 ## Motivation
 
-This is a freestyle project of an assesment.
+This is a freestyle project of an assessment.
 In this project, I try to apply as much as possible of what I've learned about responsiveness, user experience & user interface.  
 I paid attention to readability of the code, best practices and semantic elements.
 
@@ -22,7 +22,7 @@ Created by Lisa Baetsle
 
 ## Products
 
-[Assesment-Freestyle](https://lisabaetsle.github.io/Assesment-Freestyle/)
+[Assessment-Freestyle](https://lisabaetsle.github.io/Assesment-Freestyle/)
 
 ## Thanks to
 
