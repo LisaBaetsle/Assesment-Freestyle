@@ -22,7 +22,7 @@ Created by Lisa Baetsle
 
 ## Products
 
-[Assessment-Freestyle](https://lisabaetsle.github.io/Assesment-Freestyle/)
+[Assessment-Freestyle](https://lisabaetsle.github.io/Assessment-Freestyle/)
 
 ## Thanks to
 
