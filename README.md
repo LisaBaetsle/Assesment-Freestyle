@@ -3,8 +3,7 @@
 ## Motivation
 
 This is a freestyle project of an assesment.
-In this project, I try to apply as much as possible of what I've learned about  
-responsiveness, user experience & user interface.
+In this project, I try to apply as much as possible of what I've learned about responsiveness, user experience & user interface.  
 I paid attention to readability of the code, best practices and semantic elements.
 
 ## Tech/Framework used
